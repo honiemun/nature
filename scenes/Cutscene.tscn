@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/music/cutscene 1.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/sprites/cutscenes/NR_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/cutscenes/NR_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/cutscenes/NR_3.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Cutscene.gd" type="Script" id=5]
+[ext_resource path="res://addons/controller_icons/objects/TextureRect.gd" type="Script" id=6]
+[ext_resource path="res://addons/controller_icons/assets/key/z.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Cutscene"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.8, 3.9, 21.7, 23.8 ),
+"transitions": PoolRealArray( 1, 2.63902, 2.14355, 4.14106, 1 ),
+"update": 0,
+"values": [ Vector2( 80, 100 ), Vector2( 80, 100 ), Vector2( 0, 0 ), Vector2( 1200, 0 ), Vector2( 1200, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8, 3.9 ),
+"transitions": PoolRealArray( 0.217638, 3.36358, 1.86607 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 0.6, 0.6 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/HBoxContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3.9, 5.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/HBoxContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Cutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -198.0
+margin_top = -95.0
+margin_right = 2250.0
+margin_bottom = 738.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="TextureRect" type="Sprite" parent="."]
+position = Vector2( 389, 297 )
+scale = Vector2( 0.696615, 0.696615 )
+texture = ExtResource( 2 )
+
+[node name="Nr2" type="Sprite" parent="."]
+position = Vector2( 1120.33, 295.5 )
+scale = Vector2( 0.69401, 0.69401 )
+texture = ExtResource( 3 )
+
+[node name="Nr3" type="Sprite" parent="."]
+position = Vector2( 1846.33, 295 )
+scale = Vector2( 0.690104, 0.690104 )
+texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Cutscene"
+anims/Cutscene = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="Panel2" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 832.0
+margin_top = 548.0
+margin_right = 1009.0
+margin_bottom = 588.0
+alignment = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+margin_top = 13.0
+margin_right = 59.0
+margin_bottom = 27.0
+text = "Presiona "
+
+[node name="ControllerTextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+margin_left = 63.0
+margin_right = 103.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 7 )
+expand = true
+script = ExtResource( 6 )
+path = "jab"
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
+margin_left = 107.0
+margin_top = 13.0
+margin_right = 177.0
+margin_bottom = 27.0
+text = " para saltar"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
