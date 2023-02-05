@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/sprites/controller.png" type="Texture" id=1]
+[ext_resource path="res://scenes/intro/Controller.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -79,10 +80,25 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( -270, -190 ), Vector2( -270, -250 ), Vector2( -270, -190 ) ]
 }
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_anim_finish"
+} ]
+}
 
 [node name="Controller" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 
 [node name="LeftAnchor" type="Control" parent="."]
 

@@ -65,6 +65,11 @@ _global_script_classes=[ {
 "path": "res://addons/action_behavior_tree/demo/hit_state.gd"
 }, {
 "base": "State",
+"class": "HittingState",
+"language": "GDScript",
+"path": "res://states/character/hitting_state.gd"
+}, {
+"base": "State",
 "class": "IdleState",
 "language": "GDScript",
 "path": "res://states/character/idle_state.gd"
@@ -111,6 +116,7 @@ _global_script_class_icons={
 "DashState": "",
 "Follow": "",
 "HitState": "",
+"HittingState": "",
 "IdleState": "",
 "JabState": "",
 "PersistentState": "",
@@ -123,12 +129,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Nature"
-run/main_scene="res://scenes/MainGame.tscn"
+run/main_scene="res://scenes/Intro.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 BTDebugServer="*res://addons/btree/script/bt_debug_server.gd"
+ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 
 [editor_plugins]
 
@@ -137,6 +144,7 @@ enabled=PoolStringArray( "res://addons/FontAwesome5/plugin.cfg", "res://addons/b
 [global]
 
 scene=false
+escena=false
 
 [input]
 
@@ -186,6 +194,11 @@ bullet={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+
+[network]
+
+limits/websocket_server/max_in_buffer_kb=4096
+limits/websocket_server/max_out_buffer_kb=4096
 
 [physics]
 
