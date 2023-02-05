@@ -47,7 +47,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	elif anim_name == "Hit":
 		hasStopped = false
 	elif anim_name == "Dead":
-		queue_free()
+		self.queue_free()
 
 func Melee_SFX():
 	$MeleeSFX.play()

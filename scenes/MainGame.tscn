@@ -157,6 +157,12 @@ position = Vector2( 399, 338 )
 [node name="Melee" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 1275, 412 )
 
+[node name="Melee" parent="YSort/Melee" instance=ExtResource( 5 )]
+position = Vector2( -327, -32 )
+
+[node name="Melee2" parent="YSort/Melee" instance=ExtResource( 5 )]
+position = Vector2( 260, -64 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 4 )]
