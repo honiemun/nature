@@ -53,3 +53,15 @@ func _on_HurtboxArea_area_entered(area):
 func take_damage():
 	lives -= 1
 	change_state("hit")
+
+func Jab_SFX():
+	$JabSFX.play()
+
+func Dash_SFX():
+	$DashSFX.play()
+
+func Spikes_Bullets_SFX():
+	$SpikesBulletsSFX.play()
+
+func RunSFX():
+	$Run.play()
