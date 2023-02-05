@@ -135,6 +135,7 @@ config/icon="res://icon.png"
 [autoload]
 
 BTDebugServer="*res://addons/btree/script/bt_debug_server.gd"
+ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 
 [editor_plugins]
 
@@ -193,6 +194,11 @@ bullet={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+
+[network]
+
+limits/websocket_server/max_in_buffer_kb=4096
+limits/websocket_server/max_out_buffer_kb=4096
 
 [physics]
 

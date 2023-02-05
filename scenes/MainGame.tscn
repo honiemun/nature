@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sprites/inan/piso 2.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/sprites/inan/Algarrobo.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/inan/Pino.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/bg.png" type="Texture" id=8]
+[ext_resource path="res://assets/music/LEVEL 1 FULL.wav" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1003, 10 )
@@ -164,4 +165,6 @@ margin_top = 3.0
 margin_right = -3.0
 margin_bottom = 3.0
 
-[node name="Song" type="AudioStreamPlayer2D" parent="."]
+[node name="Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
