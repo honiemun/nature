@@ -35,8 +35,6 @@ func flip_character(motion):
 			is_flipped = false
 		elif motion.x <= 0.4:
 			is_flipped = true
-	
-	return is_flipped
 
 func _on_DetectionRange_body_entered(body):
 	if body.get_name() == "Character":
@@ -50,13 +48,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		hasStopped = false
 	elif anim_name == "Dead":
 		self.queue_free()
-
-func toss_axe():
-	var projectile = load("res://scenes/enemies/AxeBullet.tscn")
-	var bullet = projectile.instance()
-	
-	add_child_below_node(get_tree().get_root().get_node("MainGame").get_node("YSort"), bullet)
-	bullet.set_global_position(self.get_node("Spawn").get_global_position())
 
 func Melee_SFX():
 	$MeleeSFX.play()
