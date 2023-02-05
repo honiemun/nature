@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/inan/Arbol menu.png" type="Texture" id=2]
 [ext_resource path="res://assets/music/Start.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/sprites/barbar/LOGO.png" type="Texture" id=4]
 
 [node name="MainMenu" type="Control"]
 anchor_top = 1.0
@@ -42,6 +43,13 @@ texture = ExtResource( 2 )
 position = Vector2( 489, -270 )
 stream = ExtResource( 3 )
 autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 372.0
+margin_top = -545.0
+margin_right = 605.0
+margin_bottom = -410.0
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
