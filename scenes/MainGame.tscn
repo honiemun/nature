@@ -28,10 +28,10 @@ extents = Vector2( 10.5, 192 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.4, 1 )
-motion_mirroring = Vector2( 0, 1280 )
+motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Bg" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 637, 144 )
+position = Vector2( 582, 144 )
 texture = ExtResource( 8 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -126,7 +126,7 @@ texture = ExtResource( 3 )
 [node name="BackgroundAssets" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="BackgroundAssets"]
-position = Vector2( 997, 424 )
+position = Vector2( 1000, 425 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 2000, 360 )
@@ -161,9 +161,9 @@ position = Vector2( 1275, 412 )
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 4 )]
 margin_left = -3.0
-margin_top = 3.0
+margin_top = 4.0
 margin_right = -3.0
-margin_bottom = 3.0
+margin_bottom = 4.0
 
 [node name="Song" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
