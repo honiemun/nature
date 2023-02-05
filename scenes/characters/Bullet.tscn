@@ -13,10 +13,6 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 20.0
-height = 50.0
-
 [sub_resource type="Animation" id=3]
 resource_name = "Nueva Animación"
 length = 0.3
@@ -49,19 +45,30 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 20.0
+height = 50.0
+
 [node name="Bullet" type="KinematicBody2D"]
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 2
 playing = true
-
-[node name="Hurtbox" type="CollisionShape2D" parent="."]
-position = Vector2( 18, 4 )
-rotation = 1.5708
-shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Nueva Animación"
 "anims/Nueva Animación" = SubResource( 3 )
 anims/RESET = SubResource( 4 )
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32768
+
+[node name="Hurtbox" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( 18, 4 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

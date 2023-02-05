@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dark Fantasy Studio- Fire spell 1.mp3-9d18ebb8d60046adbeee89046bb4e405.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/fire/Mp3/Mono/Dark Fantasy Studio- Fire spell 1.mp3"
+dest_files=[ "res://.import/Dark Fantasy Studio- Fire spell 1.mp3-9d18ebb8d60046adbeee89046bb4e405.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Footsteps-forest-07.mp3-86235eb6aa2b9357742772c0084a19e0.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/steps/Mp3/Mono/Footsteps-forest-07.mp3"
+dest_files=[ "res://.import/Footsteps-forest-07.mp3-86235eb6aa2b9357742772c0084a19e0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

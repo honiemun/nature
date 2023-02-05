@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dark Fantasy Studio- Earth spell 9.mp3-316f42f5feaf9fc2a5bc1202972a4ae7.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/earth/Mp3/Mono/Dark Fantasy Studio- Earth spell 9.mp3"
+dest_files=[ "res://.import/Dark Fantasy Studio- Earth spell 9.mp3-316f42f5feaf9fc2a5bc1202972a4ae7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

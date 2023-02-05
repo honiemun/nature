@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dark Fantasy Studio- Earth spell 3.wav-1ae676317f224472d4e1eaf401d2f023.sample"
+
+[deps]
+
+source_file="res://assets/sfx/earth/Wav/Mono/Dark Fantasy Studio- Earth spell 3.wav"
+dest_files=[ "res://.import/Dark Fantasy Studio- Earth spell 3.wav-1ae676317f224472d4e1eaf401d2f023.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

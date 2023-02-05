@@ -18,3 +18,9 @@ func _ready():
 
 func _physics_process(delta):
 	move_and_slide(velocity)
+
+func _on_Hurtbox_area_entered(area):
+	if area.is_in_group("hurtbox-character"):
+		area.get_parent().take_damage(1)
+	
+	queue_free()

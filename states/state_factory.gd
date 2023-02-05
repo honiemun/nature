@@ -8,7 +8,8 @@ func _init():
 		"run": RunState,
 		"dash": DashState,
 		"jab": JabState,
-		"bullet": BulletState
+		"bullet": BulletState,
+		"hit": HittingState
 }
 
 func get_state(state_name):
