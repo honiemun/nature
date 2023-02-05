@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Footsteps-forest-65.wav-fa7499f384f8d38e55abc20f9987c69b.sample"
+
+[deps]
+
+source_file="res://assets/sfx/steps/Wav/Stereo/Footsteps-forest-65.wav"
+dest_files=[ "res://.import/Footsteps-forest-65.wav-fa7499f384f8d38e55abc20f9987c69b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

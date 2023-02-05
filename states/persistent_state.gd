@@ -8,7 +8,7 @@ onready var sprite = $Sprite
 onready var hurtbox = $HurtboxArea/Hurtbox
 var is_flipped = false
 
-var lives = 2
+var lives = 3
 var velocity = Vector2()
 
 func _ready():
@@ -39,7 +39,6 @@ func flip_character():
 		sprite.flip_h = false
 		hurtbox.position.x = 106
 	
-	print(axis.x)
 	if !(axis.x == 0):
 		if axis.x >= 0.4:
 			is_flipped = false
@@ -49,4 +48,20 @@ func flip_character():
 
 func _on_HurtboxArea_area_entered(area):
 	if area.is_in_group("hurtbox-character"):
-		area.take_damage()
+		area.get_parent().take_damage(3)
+
+func take_damage():
+	lives -= 1
+	change_state("hit")
+
+func Jab_SFX():
+	$JabSFX.play()
+
+func Dash_SFX():
+	$DashSFX.play()
+
+func Spikes_Bullets_SFX():
+	$SpikesBulletsSFX.play()
+
+func RunSFX():
+	$Run.play()

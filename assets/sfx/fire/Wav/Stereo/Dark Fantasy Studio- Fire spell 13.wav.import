@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dark Fantasy Studio- Fire spell 13.wav-3b8bd56c0062413f1a7d23c7d3835624.sample"
+
+[deps]
+
+source_file="res://assets/sfx/fire/Wav/Stereo/Dark Fantasy Studio- Fire spell 13.wav"
+dest_files=[ "res://.import/Dark Fantasy Studio- Fire spell 13.wav-3b8bd56c0062413f1a7d23c7d3835624.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
